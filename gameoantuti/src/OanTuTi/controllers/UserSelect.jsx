@@ -38,12 +38,7 @@ class UserSelect extends Component {
           <div className="speech-bubble"></div>
         </div>
         {this.displaySkill(skill)}
-        <div className="actionGif1">
-            <img src="./images/thunder.gif" alt="" />
-        </div>
-        <div className="actionGif2">
-            <img src="./images/YQDj.gif" alt="" />
-        </div>
+       
       </div>
     );
   }

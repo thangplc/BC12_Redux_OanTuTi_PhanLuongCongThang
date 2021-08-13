@@ -12,12 +12,7 @@ class CompPlay extends Component {
           </button>
           <div className="speech-bubble compSpeech-buddle"></div>
         </div>
-        <div className="actionGif3">
-          <img width="120px" src="./images/rocket-png-40794.png" alt="" />
-        </div>
-        <div className="actionGif4">
-          <img src="./images/YQDj.gif" alt="" />
-        </div>
+       
       </div>
     );
   }
