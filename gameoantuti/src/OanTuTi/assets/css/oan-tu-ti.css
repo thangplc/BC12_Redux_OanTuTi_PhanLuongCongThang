@@ -1,0 +1,157 @@
+.gameTuti {
+    background-image: url(../images/bgGame.png);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    font-family: 'gameTuti';
+}
+
+h1 {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    color: rgb(247, 153, 65);
+}
+
+@font-face {
+    font-family: 'GameTuti';
+    src: url(../font/Pony.ttf);
+}
+
+.selectBtn button {
+    position: relative;
+    z-index: 5;
+}
+
+.ImgBg {
+    max-width: 100%;
+}
+
+.gameContains {
+    margin: 40px 0 0;
+}
+
+h2 {
+    color: rgb(51, 238, 207);
+    padding: 15px 0;
+}
+
+.infoResult {
+    color: rgb(243, 149, 62);
+}
+
+.speech-bubble {
+    position: relative;
+    background: rgb(7, 4, 161);
+    border-radius: .4em;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: -314px;
+    left: 47%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: rgb(7, 4, 161);
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.UserSelect {
+    position: absolute;
+    top: -80px;
+    left: 42%;
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgb(7, 4, 161);
+    border-radius: 10px;
+}
+
+.compSpeech-buddle:after {
+    content: '';
+    position: absolute;
+    top: -260px;
+    left: 47%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: rgb(7, 4, 161);
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.gifAction2 {
+    position: absolute;
+    top: -20%;
+    left: 36%;
+    display: none;
+}
+
+.actionGif1 {
+    position: absolute;
+    top: 0;
+    left: 16%;
+    transform: rotate(45deg) scale(1.5);
+    display: none;
+}
+
+.actionGif2 {
+    position: absolute;
+    top: -25%;
+    left: 25%;
+    transform: scale(1.5);
+    display: none;
+}
+
+.actionGif4 {
+    position: absolute;
+    top: -15%;
+    left: 24%;
+    transform: scale(1.5);
+    display: none;
+}
+
+.actionGif3 {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    opacity: 0;
+    transform: rotate(180deg);
+    animation: boomFall 2s linear 5s infinite;
+    display: none;
+}
+
+@keyframes boomFall {
+    0% {
+        top: -100%;
+        opacity: 1;
+    }
+    100% {
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+button.selected {
+    border: 3px solid rgba(40, 42, 182, 0.966);
+}
+
+.result {
+    display: none;
+}
+
+.result.show {
+    display: block;
+}
+
+.ImgBg {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
