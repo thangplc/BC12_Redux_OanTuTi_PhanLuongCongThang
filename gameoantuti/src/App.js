@@ -11,3 +11,12 @@ function App() {
 }
 
 export default App;
+// useCallback(
+//   () => {
+//     let value = '';
+//     reducer = () =>{
+//       namespace: 
+//     }
+//   },
+//   [input],
+// )

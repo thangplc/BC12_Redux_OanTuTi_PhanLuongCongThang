@@ -1,6 +1,5 @@
 const initialState = {
-    TuTiArr: [
-        {
+    TuTiArr: [{
             img: './images/bao.png',
             value: "bao",
         },
@@ -25,66 +24,68 @@ const OanTuTiReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case "SELECT_ITEM":
             state.Select = payload;
-            return {...state};
+            return {...state };
         case "PLAY_GAME":
-            if(state.Select == 0){
+            if (state.Select == 0) {
                 state.Status = 'Bạn định ra cái gì?';
-                return {...state};
+                return {...state };
             }
             state.totalCount += 1;
-            state.compRandom = Math.floor(Math.random()*3+1);
-            switch(state.Select){
-                case "1": {
-                    switch(state.TuTiArr[(state.compRandom-1)].value){
-                        case "bao":
-                            state.Status = 'Hòa';
-                            break;
-                        case 'bua':
-                            state.Status = 'Thắng';
-                            break;
-                        case 'keo':
-                            state.Status = 'Thua';
-                            break;
+            state.compRandom = Math.floor(Math.random() * 3 + 1);
+            switch (state.Select) {
+                case "1":
+                    {
+                        switch (state.TuTiArr[(state.compRandom - 1)].value) {
+                            case "bao":
+                                state.Status = 'Hòa';
+                                break;
+                            case 'bua':
+                                state.Status = 'Thắng';
+                                break;
+                            case 'keo':
+                                state.Status = 'Thua';
+                                break;
+                        }
+                        break;
                     }
-                    break;
-                }
-                case "2": {
-                    switch(state.TuTiArr[(state.compRandom-1)].value){
-                        case "bao":
-                            state.Status = 'Thua';
-                            break;
-                        case 'bua':
-                            state.Status = 'Hòa';
-                            break;
-                        case 'keo':
-                            state.Status = 'Thắng';
-                            break;
+                case "2":
+                    {
+                        switch (state.TuTiArr[(state.compRandom - 1)].value) {
+                            case "bao":
+                                state.Status = 'Thua';
+                                break;
+                            case 'bua':
+                                state.Status = 'Hòa';
+                                break;
+                            case 'keo':
+                                state.Status = 'Thắng';
+                                break;
+                        }
+                        break;
                     }
-                    break;
-                }
-                case "3": {
-                    switch(state.TuTiArr[(state.compRandom-1)].value){
-                        case "bao":
-                            state.Status = 'Thắng';
-                            break;
-                        case 'bua':
-                            state.Status = 'Thua';
-                            break;
-                        case 'keo':
-                            state.Status = 'Hòa';
-                            break;
+                case "3":
+                    {
+                        switch (state.TuTiArr[(state.compRandom - 1)].value) {
+                            case "bao":
+                                state.Status = 'Thắng';
+                                break;
+                            case 'bua':
+                                state.Status = 'Thua';
+                                break;
+                            case 'keo':
+                                state.Status = 'Hòa';
+                                break;
+                        }
+                        break;
                     }
-                    break;
-                }
             }
-            if(state.Status=="Thắng"){
+            if (state.Status == "Thắng") {
                 state.skillAction = true;
                 state.winCount++;
-            }
-            else if(state.Status == 'Thua'){
+            } else if (state.Status == 'Thua') {
                 state.skillAction = false;
             }
-            return {...state};
+            return {...state };
         default:
             return state;
     }
